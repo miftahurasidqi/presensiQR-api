@@ -13,7 +13,8 @@ const rutePegawai_1 = __importDefault(require("./routes/rutePegawai"));
 const ruteKehadiran_1 = __importDefault(require("./routes/ruteKehadiran"));
 const ruteWs_1 = __importDefault(require("./routes/ruteWs"));
 // absen_QR
-// mongodb+srv://miftahurasidqi :Cedm4Ip6XI4f5kSy@cluster0.d3dl5wx.mongodb.net/?retryWrites=true&w=majority
+// mongodb+srv://miftahurasidqi:Cedm4Ip6XI4f5kSy@cluster0.d3dl5wx.mongodb.net/?retryWrites=true&w=majority
+// mongodb+srv://miftahurasidqi:Cedm4Ip6XI4f5kSy@cluster0.d3dl5wx.mongodb.net/presensi_QR
 // mongodb://127.0.0.1:27017/presensi
 dotenv_1.default.config();
 const app = (0, express_1.default)();
@@ -24,7 +25,7 @@ app.use(express_1.default.json());
 app.use("/api/pegawai", rutePegawai_1.default);
 app.use("/api/kehadiran", ruteKehadiran_1.default);
 (0, ruteWs_1.default)(app);
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5030;
 mongoose_1.default
     .connect(process.env.MONGO_URI)
     .then(() => {
